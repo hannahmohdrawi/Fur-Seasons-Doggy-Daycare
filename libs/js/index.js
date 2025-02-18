@@ -19,7 +19,13 @@ $(document).ready(function() {
     fetchDogImages();
 });
 
-function fetchDogImages() {
+
+//Search function
+$("#searchInp").on("keyup", function () {
+    const searchTerm = $("#searchInp").val();
+});
+
+function fetchDogImages(searchTerm) {
     $.ajax({
         url: "libs/php/dogImages.php",
         type: "GET",
@@ -31,7 +37,7 @@ function fetchDogImages() {
 
                 result.data.forEach(function (dog, index) {
                     let dogCard = `
-                        <div class="col-md-4 col-lg-2 dog-card">
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3 dog-card">
                             <div class="card">
                                 <img src="${dog.url}" class="card-img-top" alt="Adoptable Dog ${index + 1}">
                                 <div class="card-body text-center">
