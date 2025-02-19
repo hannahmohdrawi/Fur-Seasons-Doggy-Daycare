@@ -66,18 +66,15 @@ function fetchDogImages(searchTerm) {
         dataType: "json",
         success: function (result) {
             if (result.status.code === "200" && result.data) {
-                let dogContainer = $("#dogs .row"); // Select the container where dog cards will be added
-                dogContainer.empty(); // Clear any existing content
+                let dogContainer = $("#dogs .row");
+                dogContainer.empty();
 
-                result.data.forEach(function (dog, index) {
+                // Only iterate over the first 5 images
+                result.data.slice(0, 6).forEach(function (dog, index) {
                     let dogCard = `
-                        <div class="col-12 col-sm-6 col-md-4 col-lg-3 dog-card">
-                            <div class="card">
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-2 dog-card mb-4">
+                            <div class="card shadow p-3">
                                 <img src="${dog.url}" class="card-img-top" alt="Adoptable Dog ${index + 1}">
-                                <div class="card-body text-center">
-                                    <h5 class="card-title">Dog ${index + 1}</h5>
-                                    <p class="card-text">Looking for a loving home!</p>
-                                </div>
                             </div>
                         </div>
                     `;
@@ -92,6 +89,7 @@ function fetchDogImages(searchTerm) {
         },
     });
 };
+
 
 
 function fetchSuccessfulAdoptions(){

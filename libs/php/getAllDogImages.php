@@ -9,7 +9,9 @@
     $executionStartTime = microtime(true);
 
     // API URL for fetching 10 random dog images
-    $url = 'https://api.thedogapi.com/v1/images/search?limit=10';
+    $url = 'https://api.thedogapi.com/v1/images/search?limit=5';
+
+
 
     // Initialize cURL
     $ch = curl_init();
