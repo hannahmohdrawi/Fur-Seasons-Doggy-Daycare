@@ -1,0 +1,27 @@
+Fur Seasons Doggy Daycare
+
+Fur Seasons Doggy Daycare is a web application designed to facilitate dog adoption. The platform allows users to browse available dogs, apply for adoption, and manage adoption requests. The website is built using PHP, JavaScript, HTML, CSS, Bootstrap, and AJAX calls for seamless interactivity.
+
+Features
+
+🐶 Browse available dogs for adoption
+
+📋 Submit adoption applications
+
+📨 Real-time updates using AJAX calls
+
+🔐 User authentication for applicants and admins
+
+📊 Admin dashboard for managing adoption requests
+
+🎨 Responsive design with Bootstrap
+
+Technologies Used
+
+Frontend: HTML, CSS, JavaScript, Bootstrap
+
+Backend: PHP
+
+Database: MySQL
+
+AJAX: For dynamic content updates
