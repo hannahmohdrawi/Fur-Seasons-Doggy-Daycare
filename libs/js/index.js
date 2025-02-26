@@ -49,7 +49,7 @@ $('#filterModal').on('show.bs.modal', function () {
                 const activeLocation = locationSelect.data('selected') || 'all';
                 locationSelect.val(activeLocation);
             } else {
-                console.error("Error fetching locations:", response.status.description);
+                console.error("Error fetching dogs:", response.status.description);
             }
         },
         error: function() {
