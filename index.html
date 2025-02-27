@@ -35,21 +35,67 @@
     </nav>
     
     <header id="header" class="bg-dark text-white text-center py-5">
-        <h1>Welcome to the Dog Adoption Center</h1>
-        <p>Find your perfect furry friend today!</p>
+        <h1>Welcome to the Fur Seasons Doggy Daycare</h1>
+        <p>Leave us with your best friend to care for or find your perfect furry friend today!</p>
     </header>
     
     <section id="dogs" class="container my-5">
         <h2 class="text-center">Dogs Available for Adoption</h2>
+        
+        <div class="row">
+            <!-- Dog cards will be dynamically inserted here -->
+        </div>
+    </section>
+
+    <section class="container my-5">
+        <h2 class="text-center mb-4">Our Dog Care Services</h2>
         <div class="d-flex justify-content-center mb-4">
         
             <button id="filterBtn" class="btn btn-info text-light ms-2" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#filterModal">
                 <i class="fa-solid fa-filter"></i>
             </button>
         </div>
-        
-        <div class="row">
-            <!-- Dog cards will be dynamically inserted here -->
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card shadow-sm">
+                    <img src="dog-grooming.jpg" class="card-img-top" alt="Dog Grooming">
+                    <div class="card-body">
+                        <h5 class="card-title">Grooming <i class="fa-solid fa-broom"></i></h5>
+                        <p class="card-text">Professional grooming to keep your dog clean and stylish.</p>
+                        <a href="#" class="btn btn-info">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow-sm">
+                    <img src="dog-walking.jpg" class="card-img-top" alt="Dog Walking">
+                    <div class="card-body">
+                        <h5 class="card-title">Dog Walking <i class="fa-solid fa-person-walking"></i></h5>
+                        <p class="card-text">Daily walks to keep your furry friend active and happy.</p>
+                        <a href="#" class="btn btn-info">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow-sm">
+                    <img src="dog-boarding.jpg" class="card-img-top" alt="Dog Boarding">
+                    <div class="card-body">
+                        <h5 class="card-title">Boarding <i class="fa-solid fa-igloo"></i></h5>
+                        <p class="card-text">Safe and comfortable boarding services for your pet.</p>
+                        <a href="#" class="btn btn-info">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow-sm">
+                    <img src="dog-feeding.jpg" class="card-img-top" alt="Dog Feed">
+                    <div class="card-body">
+                        <h5 class="card-title">Feeding <i class="fa-solid fa-bone"></i></h5>
+                        <p class="card-text">Nutritious meals tailored to your dog's dietary needs.</p>
+                        <a href="#" class="btn btn-info">Learn More</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
