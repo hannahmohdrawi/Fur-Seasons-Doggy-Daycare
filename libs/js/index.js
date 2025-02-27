@@ -33,7 +33,6 @@ $('#filterModal').on('show.bs.modal', function () {
     constbreedSelect.empty();
     constbreedSelect.append('<option value="all" selected>All Locations</option>');
 
-    // Loading locations
     $.ajax({
         url: 'libs/php/getAllBreeds.php', 
         type: 'GET',
@@ -59,6 +58,8 @@ $('#filterModal').on('show.bs.modal', function () {
 
 });
 
+
+/*
 function fetchDogImages(searchTerm) {
     $.ajax({
         url: "libs/php/getAllDogImages.php",
@@ -89,6 +90,39 @@ function fetchDogImages(searchTerm) {
         },
     });
 };
+*/
+
+function fetchDogImages() {
+    $.ajax({
+        url: "libs/php/getAllDogImages.php",
+        type: "GET", 
+        dataType: "json",
+        success: function (result) {
+            if (result.status.code === "200" && result.message && Array.isArray(result.message)) {
+                let dogContainer = $("#dogs");
+                dogContainer.empty();  
+
+                result.message.forEach(function (dogUrl, index) {
+                    let dogCard = `
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-2 dog-card mb-4">
+                            <div class="card shadow p-3">
+                                <img src="${dogUrl}" class="card-img-top" alt="Dog Image ${index + 1}">
+                            </div>
+                        </div>
+                    `;
+                    dogContainer.append(dogCard);
+                });
+            } else {
+                $("#dogs").html("<p class='text-center'>No dog images available.</p>");
+            }
+        },
+        error: function () {
+            $("#dogs").html("<p class='text-center'>Error fetching dog images. Please try again.</p>");
+        }
+    });
+}
+
+
 
 
 
