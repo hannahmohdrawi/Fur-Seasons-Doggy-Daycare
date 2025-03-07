@@ -13,6 +13,8 @@ Fur Seasons Doggy Daycare is a web application designed to facilitate dog adopti
 * 📊 Admin dashboard for managing adoption requests
 
 * 🎨 Responsive design with Bootstrap
+  
+* 📟 Contact Form
 
 
 ## Languages used:
